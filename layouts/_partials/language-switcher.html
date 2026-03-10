@@ -1,0 +1,24 @@
+{{ if hugo.IsMultilingual }}
+<div class="language-switcher">
+  {{ range site.Languages }}
+    {{ $flag := "🇬🇧" }}
+    {{ if eq .Lang "bg" }}{{ $flag = "🇧🇬" }}{{ end }}
+    {{ if eq .Lang site.Language.Lang }}
+      <span class="current-lang" title="{{ .LanguageName }}">{{ $flag }}</span>
+    {{ else }}
+      {{ with $.Translations }}
+        {{ range . }}
+          {{ if ne .Language.Lang site.Language.Lang }}
+            {{ $linkFlag := "🇬🇧" }}
+            {{ if eq .Language.Lang "bg" }}{{ $linkFlag = "🇧🇬" }}{{ end }}
+            <a href="{{ .Permalink }}" class="lang-link" title="{{ .Language.LanguageName }}">{{ $linkFlag }}</a>
+          {{ end }}
+        {{ end }}
+      {{ else }}
+        <a href="{{ .Lang | relLangURL }}" class="lang-link" title="{{ .LanguageName }}">{{ $flag }}</a>
+      {{ end }}
+    {{ end }}
+  {{ end }}
+</div>
+{{ end }}
+

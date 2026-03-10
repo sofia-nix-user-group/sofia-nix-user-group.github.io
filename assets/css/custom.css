@@ -1,0 +1,271 @@
+/* SNUG Custom Styles - Based on NixOS Branding Guide */
+
+/* Import Route 159 font (or fallback to similar sans-serif) */
+@import url('https://fonts.cdnfonts.com/css/route-159');
+
+/* NixOS Brand Colors */
+:root {
+  /* Primary */
+  --nix-black: #000000;
+  --nix-white: #ffffff;
+  
+  /* Secondary - Logo Colors */
+  --nix-dark-blue: #4d6fb7;
+  --nix-light-blue: #77b6e1;
+  
+  /* Afghani Blue Palette */
+  --nix-blue-95: #e4edf9;
+  --nix-blue-85: #b5cdef;
+  --nix-blue-75: #7faae3;
+  --nix-blue-65: #5e8cc7;
+  --nix-blue-55: #4d6fb7;
+  --nix-blue-45: #3a5490;
+  --nix-blue-35: #293b66;
+  --nix-blue-25: #18243e;
+  --nix-blue-15: #0a0f19;
+  
+  /* Argentinian Blue Palette */
+  --nix-arg-blue-95: #e5f2fb;
+  --nix-arg-blue-85: #b8ddf4;
+  --nix-arg-blue-75: #77b6e1;
+  --nix-arg-blue-65: #5a9ac7;
+  --nix-arg-blue-55: #447fa8;
+  
+  /* Font */
+  --font-primary: 'Route 159', 'Segoe UI', 'Roboto', sans-serif;
+}
+
+/* Base Typography */
+body {
+  font-family: var(--font-primary);
+  color: var(--nix-black);
+  background-color: var(--nix-white);
+}
+
+/* Headings */
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-primary);
+  font-weight: 700;
+  color: var(--nix-dark-blue);
+}
+
+/* Links */
+a {
+  color: var(--nix-dark-blue);
+  transition: color 0.2s ease;
+}
+
+a:hover {
+  color: var(--nix-light-blue);
+}
+
+/* Navigation - Override Ananke theme */
+.bg-dark-blue {
+  background-color: var(--nix-dark-blue) !important;
+}
+
+nav a {
+  font-family: var(--font-primary);
+}
+
+/* Hero/Header section */
+.cover-bg {
+  background-color: var(--nix-dark-blue);
+}
+
+/* Code blocks */
+code, pre {
+  font-family: 'JetBrains Mono', 'Fira Code', 'Consolas', monospace;
+  background-color: var(--nix-blue-95);
+  border-radius: 4px;
+}
+
+pre {
+  padding: 1rem;
+  overflow-x: auto;
+}
+
+code {
+  padding: 0.2rem 0.4rem;
+}
+
+/* Tables */
+table {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+th {
+  background-color: var(--nix-dark-blue);
+  color: var(--nix-white);
+  padding: 0.75rem;
+  text-align: left;
+}
+
+td {
+  border-bottom: 1px solid var(--nix-blue-85);
+  padding: 0.75rem;
+}
+
+tr:hover {
+  background-color: var(--nix-blue-95);
+}
+
+/* Buttons */
+.btn, button {
+  background-color: var(--nix-dark-blue);
+  color: var(--nix-white);
+  padding: 0.5rem 1rem;
+  border: none;
+  border-radius: 4px;
+  font-family: var(--font-primary);
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.btn:hover, button:hover {
+  background-color: var(--nix-light-blue);
+}
+
+/* Footer */
+footer {
+  background-color: var(--nix-blue-25);
+  color: var(--nix-white);
+}
+
+footer a {
+  color: var(--nix-light-blue);
+}
+
+/* Selection highlight */
+::selection {
+  background-color: var(--nix-light-blue);
+  color: var(--nix-white);
+}
+
+/* Scrollbar (WebKit) */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--nix-blue-95);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--nix-dark-blue);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--nix-light-blue);
+}
+
+/* Ananke Theme Overrides */
+.bg-nix-blue {
+  background-color: var(--nix-dark-blue) !important;
+}
+
+/* Site header/nav */
+.site-header, header.bg-dark-blue, header.bg-nix-blue {
+  background-color: var(--nix-dark-blue) !important;
+}
+
+/* Article/Content styling */
+article h1, article h2, article h3 {
+  color: var(--nix-dark-blue);
+  border-bottom: 2px solid var(--nix-light-blue);
+  padding-bottom: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+/* Nested links in content */
+.nested-links a {
+  color: var(--nix-dark-blue);
+  text-decoration: underline;
+  text-decoration-color: var(--nix-light-blue);
+  text-underline-offset: 2px;
+}
+
+.nested-links a:hover {
+  color: var(--nix-light-blue);
+}
+
+/* List styling */
+article ul, article ol {
+  margin-left: 1.5rem;
+}
+
+article li {
+  margin-bottom: 0.5rem;
+}
+
+/* Blockquotes */
+blockquote {
+  border-left: 4px solid var(--nix-dark-blue);
+  background-color: var(--nix-blue-95);
+  padding: 1rem;
+  margin: 1rem 0;
+  font-style: italic;
+}
+
+/* Card/box styling */
+.pa3, .pa4 {
+  border-radius: 8px;
+}
+
+/* Homepage hero text */
+.f-headline, .f1, .f2 {
+  font-family: var(--font-primary);
+  font-weight: 700;
+}
+
+/* Emoji sizing */
+h1 .emoji, h2 .emoji, h3 .emoji {
+  font-style: normal;
+}
+
+/* Homepage logo */
+.is-home article > p:first-child img {
+  max-width: 200px;
+  height: auto;
+  border-radius: 8px;
+  margin-bottom: 1rem;
+}
+
+/* Language Switcher */
+.language-switcher {
+  display: inline-flex;
+  gap: 0.25rem;
+  align-items: center;
+  font-size: 1.5rem;
+}
+
+.language-switcher .current-lang {
+  padding: 0.25rem;
+  background-color: rgba(255, 255, 255, 0.2);
+  border-radius: 4px;
+  cursor: default;
+}
+
+.language-switcher .lang-link {
+  text-decoration: none;
+  padding: 0.25rem;
+  border-radius: 4px;
+  opacity: 0.6;
+  transition: opacity 0.2s ease, background-color 0.2s ease;
+}
+
+.language-switcher .lang-link:hover {
+  opacity: 1;
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+/* Language switcher in header */
+header .language-switcher {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+}
+

@@ -1,0 +1,69 @@
+# English translations
+
+[readMore]
+other = "Read more"
+
+[recentPosts]
+other = "Recent Posts"
+
+[allPosts]
+other = "All Posts"
+
+[postedOn]
+other = "Posted on"
+
+[by]
+other = "by"
+
+[home]
+other = "Home"
+
+[events]
+other = "Events"
+
+[resources]
+other = "Resources"
+
+[community]
+other = "Community"
+
+[about]
+other = "About"
+
+[codeOfConduct]
+other = "Code of Conduct"
+
+[copyright]
+other = "Copyright"
+
+[poweredBy]
+other = "Powered by"
+
+[backToTop]
+other = "Back to top"
+
+[tableOfContents]
+other = "Table of Contents"
+
+[share]
+other = "Share"
+
+[relatedContent]
+other = "Related Content"
+
+[tags]
+other = "Tags"
+
+[categories]
+other = "Categories"
+
+[search]
+other = "Search"
+
+[noResults]
+other = "No results found"
+
+[minuteRead]
+one = "minute read"
+other = "minutes read"
+

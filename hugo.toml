@@ -1,0 +1,98 @@
+baseURL = "https://sofia-nix-user-group.github.io/"
+theme = "ananke"
+defaultContentLanguage = "en"
+defaultContentLanguageInSubdir = true
+
+[params]
+  favicon = "/images/favicon.ico"
+  site_logo = ""
+  background_color_class = "bg-nix-blue"
+  custom_css = ["css/custom.css"]
+  recent_posts_number = 5
+  images = ["/images/og-image.png"]
+
+# Languages
+[languages]
+  [languages.en]
+    languageCode = "en"
+    languageName = "English"
+    weight = 1
+    title = "Sofia Nix User Group"
+    contentDir = "content/en"
+    [languages.en.params]
+      description = "Sofia Nix User Group - A community for Nix/NixOS enthusiasts in Sofia, Bulgaria"
+    [[languages.en.menu.main]]
+      identifier = "home"
+      name = "Home"
+      url = "/en/"
+      weight = 1
+    [[languages.en.menu.main]]
+      identifier = "events"
+      name = "Events"
+      url = "/en/events/"
+      weight = 2
+    [[languages.en.menu.main]]
+      identifier = "resources"
+      name = "Resources"
+      url = "/en/resources/"
+      weight = 3
+    [[languages.en.menu.main]]
+      identifier = "community"
+      name = "Community"
+      url = "/en/community/"
+      weight = 4
+    [[languages.en.menu.main]]
+      identifier = "about"
+      name = "About"
+      url = "/en/about/"
+      weight = 5
+    [[languages.en.menu.main]]
+      identifier = "code-of-conduct"
+      name = "Code of Conduct"
+      url = "/en/code-of-conduct/"
+      weight = 6
+
+  [languages.bg]
+    languageCode = "bg"
+    languageName = "Български"
+    weight = 2
+    title = "Софийска Nix Потребителска Група"
+    contentDir = "content/bg"
+    [languages.bg.params]
+      description = "Софийска Nix Потребителска Група - общност за Nix/NixOS ентусиасти в София, България"
+    [[languages.bg.menu.main]]
+      identifier = "home"
+      name = "Начало"
+      url = "/bg/"
+      weight = 1
+    [[languages.bg.menu.main]]
+      identifier = "events"
+      name = "Събития"
+      url = "/bg/events/"
+      weight = 2
+    [[languages.bg.menu.main]]
+      identifier = "resources"
+      name = "Ресурси"
+      url = "/bg/resources/"
+      weight = 3
+    [[languages.bg.menu.main]]
+      identifier = "community"
+      name = "Общност"
+      url = "/bg/community/"
+      weight = 4
+    [[languages.bg.menu.main]]
+      identifier = "about"
+      name = "За нас"
+      url = "/bg/about/"
+      weight = 5
+    [[languages.bg.menu.main]]
+      identifier = "code-of-conduct"
+      name = "Кодекс на поведение"
+      url = "/bg/code-of-conduct/"
+      weight = 6
+
+[markup]
+  [markup.goldmark]
+    [markup.goldmark.renderer]
+      unsafe = true
+

@@ -1,0 +1,22 @@
+# AI agent skills
+.agents/
+
+# Hugo build output
+public/
+resources/_gen/
+
+# Nix
+result
+result-*
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Editor files
+*.swp
+*.swo
+*~
+.idea/
+.vscode/
+

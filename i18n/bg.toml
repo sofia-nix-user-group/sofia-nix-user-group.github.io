@@ -1,0 +1,69 @@
+# Bulgarian translations
+
+[readMore]
+other = "Прочетете повече"
+
+[recentPosts]
+other = "Скорошни публикации"
+
+[allPosts]
+other = "Всички публикации"
+
+[postedOn]
+other = "Публикувано на"
+
+[by]
+other = "от"
+
+[home]
+other = "Начало"
+
+[events]
+other = "Събития"
+
+[resources]
+other = "Ресурси"
+
+[community]
+other = "Общност"
+
+[about]
+other = "За нас"
+
+[codeOfConduct]
+other = "Кодекс на поведение"
+
+[copyright]
+other = "Авторско право"
+
+[poweredBy]
+other = "Създадено с"
+
+[backToTop]
+other = "Обратно нагоре"
+
+[tableOfContents]
+other = "Съдържание"
+
+[share]
+other = "Сподели"
+
+[relatedContent]
+other = "Свързано съдържание"
+
+[tags]
+other = "Тагове"
+
+[categories]
+other = "Категории"
+
+[search]
+other = "Търсене"
+
+[noResults]
+other = "Няма намерени резултати"
+
+[minuteRead]
+one = "минута четене"
+other = "минути четене"
+
