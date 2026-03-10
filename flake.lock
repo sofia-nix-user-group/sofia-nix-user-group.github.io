@@ -1,5 +1,21 @@
 {
   "nodes": {
+    "ananke-theme": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1769123729,
+        "narHash": "sha256-uUcLsgM7sUCSc8A8DTZ0bwaIKCy7QpNxkqe1ucsILrE=",
+        "owner": "theNewDynamic",
+        "repo": "gohugo-theme-ananke",
+        "rev": "a5f3dd61ce53879019049d9a2ba8f049abdfee68",
+        "type": "github"
+      },
+      "original": {
+        "owner": "theNewDynamic",
+        "repo": "gohugo-theme-ananke",
+        "type": "github"
+      }
+    },
     "flake-utils": {
       "inputs": {
         "systems": "systems"
@@ -36,6 +52,7 @@
     },
     "root": {
       "inputs": {
+        "ananke-theme": "ananke-theme",
         "flake-utils": "flake-utils",
         "nixpkgs": "nixpkgs"
       }

@@ -1,12 +1,16 @@
 {
-  description = "SNUG - Sofia NIX User Group website";
+  description = "SNUG - Sofia Nix User Group website";
 
   inputs = {
     nixpkgs.url = "github:NixOS/nixpkgs/nixos-unstable";
     flake-utils.url = "github:numtide/flake-utils";
+    ananke-theme = {
+      url = "github:theNewDynamic/gohugo-theme-ananke";
+      flake = false;
+    };
   };
 
-  outputs = { self, nixpkgs, flake-utils }:
+  outputs = { self, nixpkgs, flake-utils, ananke-theme }:
     flake-utils.lib.eachDefaultSystem (system:
       let
         pkgs = nixpkgs.legacyPackages.${system};
@@ -21,6 +25,8 @@
             nativeBuildInputs = [ pkgs.hugo ];
 
             buildPhase = ''
+              mkdir -p themes/ananke
+              cp -r ${ananke-theme}/* themes/ananke/
               hugo --minify
             '';
 
