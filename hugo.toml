@@ -7,7 +7,7 @@ defaultContentLanguageInSubdir = true
   favicon = "/images/favicon.ico"
   site_logo = ""
   background_color_class = "bg-nix-blue"
-  custom_css = ["css/custom.css"]
+  custom_css = []
   recent_posts_number = 5
   images = ["/images/og-image.png"]
 
