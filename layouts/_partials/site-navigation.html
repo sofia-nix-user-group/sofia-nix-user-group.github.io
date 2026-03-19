@@ -1,5 +1,5 @@
 <nav class="pv3 ph3 ph4-ns" role="navigation">
-  <div class="flex-l center items-center justify-between">
+  <div class="flex items-center justify-between">
     <a href="{{ .Site.Home.RelPermalink }}" class="f3 fw2 hover-white white-90 dib no-underline">
       {{ with .Site.Params.site_logo }}
         <img src="{{ urls.RelURL . }}" class="w100 mw5-ns" alt="{{ $.Site.Title }}" />
@@ -7,21 +7,94 @@
         {{ .Site.Title }}
       {{ end }}
     </a>
-    <div class="flex-l items-center">
-      {{/* Removed i18nlist.html - using language-switcher instead */}}
-      {{ if .Site.Menus.main }}
-        <ul class="{{ compare.Conditional (compare.Eq $.Site.Language.LanguageDirection "rtl") "pr0 ml3" "pl0 mr3" }}">
-          {{ range .Site.Menus.main }}
+    
+    {{/* Hamburger button - visible only on mobile */}}
+    <button class="db dn-l bg-transparent bn white-90 pointer pa2" id="menu-toggle" aria-label="Toggle menu" aria-expanded="false">
+      <svg class="hamburger-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+        <line x1="3" y1="6" x2="21" y2="6"></line>
+        <line x1="3" y1="12" x2="21" y2="12"></line>
+        <line x1="3" y1="18" x2="21" y2="18"></line>
+      </svg>
+      <svg class="close-icon dn" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+        <line x1="18" y1="6" x2="6" y2="18"></line>
+        <line x1="6" y1="6" x2="18" y2="18"></line>
+      </svg>
+    </button>
+
+    {{/* Desktop menu */}}
+    <div class="dn flex-l items-center">
+      <ul class="{{ compare.Conditional (compare.Eq $.Site.Language.LanguageDirection "rtl") "pr0 ml3" "pl0 mr3" }}">
+        {{ range .Site.Menus.main }}
+        <li class="list f5 f4-ns fw4 dib {{ compare.Conditional (compare.Eq $.Site.Language.LanguageDirection "rtl") "pl3" "pr3" }}">
+          <a class="hover-white white-90 no-underline" href="{{ .URL }}" title="{{ lang.Translate "pageTitle" . }}">
+            {{ .Name }}
+          </a>
+        </li>
+        {{ end }}
+        {{/* Language switcher */}}
+        {{ if .IsTranslated }}
+          {{ range .Translations }}
           <li class="list f5 f4-ns fw4 dib {{ compare.Conditional (compare.Eq $.Site.Language.LanguageDirection "rtl") "pl3" "pr3" }}">
-            <a class="hover-white white-90 no-underline" href="{{ .URL }}" title="{{ lang.Translate "pageTitle" . }}">
-              {{ .Name }}
+            <a class="hover-white white-90 no-underline" href="{{ .RelPermalink }}" title="{{ .Language.LanguageName }}">
+              {{- if eq .Language.Lang "en" }}🇬🇧{{ else if eq .Language.Lang "bg" }}🇧🇬{{ else }}{{ .Language.Lang }}{{ end -}}
             </a>
           </li>
           {{ end }}
-        </ul>
-      {{ end }}
-      {{ partials.IncludeCached "social/follow.html" . }}
+        {{ end }}
+      </ul>
+    </div>
+  </div>
+
+  {{/* Mobile menu - hidden by default */}}
+  <div class="dn" id="mobile-menu">
+    <div class="flex flex-column pt3">
+      <ul class="list pl0 mv2">
+        {{ range .Site.Menus.main }}
+        <li class="pv2 bb b--white-20">
+          <a class="hover-white white-90 no-underline f5" href="{{ .URL }}" title="{{ lang.Translate "pageTitle" . }}">
+            {{ .Name }}
+          </a>
+        </li>
+        {{ end }}
+        {{/* Language switcher */}}
+        {{ if .IsTranslated }}
+          {{ range .Translations }}
+          <li class="pv2 bb b--white-20">
+            <a class="hover-white white-90 no-underline f5" href="{{ .RelPermalink }}" title="{{ .Language.LanguageName }}">
+              {{- if eq .Language.Lang "en" }}🇬🇧 English{{ else if eq .Language.Lang "bg" }}🇧🇬 Български{{ else }}{{ .Language.LanguageName }}{{ end -}}
+            </a>
+          </li>
+          {{ end }}
+        {{ end }}
+      </ul>
     </div>
   </div>
 </nav>
+
+<script>
+(function() {
+  const toggle = document.getElementById('menu-toggle');
+  const menu = document.getElementById('mobile-menu');
+  const hamburger = toggle.querySelector('.hamburger-icon');
+  const close = toggle.querySelector('.close-icon');
+
+  toggle.addEventListener('click', function() {
+    const isOpen = menu.classList.contains('db');
+    
+    if (isOpen) {
+      menu.classList.remove('db');
+      menu.classList.add('dn');
+      hamburger.classList.remove('dn');
+      close.classList.add('dn');
+      toggle.setAttribute('aria-expanded', 'false');
+    } else {
+      menu.classList.remove('dn');
+      menu.classList.add('db');
+      hamburger.classList.add('dn');
+      close.classList.remove('dn');
+      toggle.setAttribute('aria-expanded', 'true');
+    }
+  });
+})();
+</script>
 
