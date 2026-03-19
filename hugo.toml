@@ -1,4 +1,4 @@
-baseURL = "https://sofia-nix-user-group.github.io/"
+baseURL = "https://snugbg.org/"
 theme = "ananke"
 defaultContentLanguage = "en"
 defaultContentLanguageInSubdir = true
