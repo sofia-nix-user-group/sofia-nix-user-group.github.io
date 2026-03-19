@@ -61,7 +61,7 @@ A curated collection of resources to help you learn Nix and NixOS, from beginner
 
 - [devenv](https://devenv.sh/) — Fast, declarative development environments
 - [direnv](https://direnv.net/) + [nix-direnv](https://github.com/nix-community/nix-direnv) — Automatic environment loading
-- [nixpkgs-fmt](https://github.com/nix-community/nixpkgs-fmt) — Nix code formatter
+- [nixpkgs-fmt](https://github.com/NixOS/nixfmt) — Nix code formatter
 - [nix-tree](https://github.com/utdemir/nix-tree) — Visualize Nix derivation dependencies
 
 ---
