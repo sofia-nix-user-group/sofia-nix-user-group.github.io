@@ -46,11 +46,11 @@ defaultContentLanguageInSubdir = true
       name = "About"
       url = "/en/about/"
       weight = 5
-    [[languages.en.menu.main]]
+    [[languages.en.menu.footer]]
       identifier = "code-of-conduct"
       name = "Code of Conduct"
       url = "/en/code-of-conduct/"
-      weight = 6
+      weight = 1
 
   [languages.bg]
     languageCode = "bg"
@@ -85,11 +85,11 @@ defaultContentLanguageInSubdir = true
       name = "За нас"
       url = "/bg/about/"
       weight = 5
-    [[languages.bg.menu.main]]
+    [[languages.bg.menu.footer]]
       identifier = "code-of-conduct"
       name = "Кодекс на поведение"
       url = "/bg/code-of-conduct/"
-      weight = 6
+      weight = 1
 
 [markup]
   [markup.goldmark]
