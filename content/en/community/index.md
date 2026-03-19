@@ -12,6 +12,8 @@ SNUG is a welcoming community for anyone interested in Nix, NixOS, and declarati
 
 Join our real-time chat to ask questions, share your projects, and connect with other Nix enthusiasts in Sofia:
 
+**[Join our Discord](https://discord.gg/mjr4nH6U)** — Our primary communication platform
+
 ## 📅 Attend Events
 
 We organize regular meetups in Sofia. Check our [Events page](/events/) for upcoming gatherings.
@@ -20,9 +22,8 @@ We organize regular meetups in Sofia. Check our [Events page](/events/) for upco
 
 Stay updated with SNUG news and announcements:
 
-<!-- Update these links with your actual social media -->
-
 - **GitHub** — [sofia-nix-user-group](https://github.com/sofia-nix-user-group)
+- **Discord** — [Join us](https://discord.gg/mjr4nH6U)
 
 ## 🙋 How to Get Involved
 
@@ -55,5 +56,5 @@ We're committed to providing a friendly, safe, and welcoming environment for all
 
 ---
 
-*Questions? Reach out on any of our chat platforms — we're happy to help!*
+*Questions? Reach out on [Discord](https://discord.gg/mjr4nH6U) — we're happy to help!*
 

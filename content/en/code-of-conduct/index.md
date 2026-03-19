@@ -50,9 +50,9 @@ This Code of Conduct also applies when an individual is officially representing 
 
 ### Reporting
 
-Instances of abusive, harassing, or otherwise unacceptable behavior may be reported to the community organizers at:
+Instances of abusive, harassing, or otherwise unacceptable behavior may be reported to the community organizers via Discord:
 
-📧 **[snug-conduct@example.com](mailto:snug-conduct@example.com)**
+💬 **[Join our Discord](https://discord.gg/mjr4nH6U)** — Contact a moderator directly
 
 All complaints will be reviewed and investigated promptly and fairly. All community leaders are obligated to respect the privacy and security of the reporter of any incident.
 
