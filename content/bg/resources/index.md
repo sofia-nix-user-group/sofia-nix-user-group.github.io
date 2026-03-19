@@ -61,7 +61,7 @@ featured_image: ""
 
 - [devenv](https://devenv.sh/) — Бързи, декларативни среди за разработка
 - [direnv](https://direnv.net/) + [nix-direnv](https://github.com/nix-community/nix-direnv) — Автоматично зареждане на среди
-- [nixpkgs-fmt](https://github.com/nix-community/nixpkgs-fmt) — Форматиране на Nix код
+- [nixpkgs-fmt](https://github.com/NixOS/nixfmt) — Форматиране на Nix код
 - [nix-tree](https://github.com/utdemir/nix-tree) — Визуализирайте Nix derivation зависимости
 
 ---
